@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding:0;
+	border:0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	/* display: flex; */
+}
+/****************** Estructura html ****************************/
+header {
+	height:25%;
+	background-color: #9999fc;
+	position: relative;
+}
+
+h1 {                                   
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+
+#logo {
+	height: 100px;
+	width: 100px;
+	position:absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+	right: 15%;	
+}
+
+nav {
+	position:relative;	
+	height: 5%;
+	background-color: #81F7F3;	
+}	
+nav ul {
+	position:absolute;
+	height: 100%;
+	/* ocupa 50% de la pantalla */
+	width: 50%;
+	/* lo muevo el 50% y lo centro */
+	margin-left: 50%;
+	transform: translate(-50%, 0);	
+}
+
+nav ul li {
+	display: inline-table;
+	padding: 0 3%;
+	margin-left: 20px;
+}	
+
+nav ul li a {
+	text-decoration:none;
+	font-weight: bold;
+	font-size: x-large;	
+}
+
+a:visited {
+	color: blue;
+}
+
+section {
+	height: 60%;
+	width:75%;
+	float:left;
+	background-color: #f4f87e;	
+}
+
+article {
+	height: 33.33%;
+	background-color: rgb(162, 207, 157);
+}
+article h2 {
+	text-align: center;
+	padding-top: 0.5%;	
+}
+
+article p {
+	padding: 0.5% 2%;         /*si no especifico más valores se lo aplica a todo */
+	text-align: justify;
+}
+
+aside {
+	position: relative;
+	height: 60%;
+	width: 25%;
+	background-color: #dfb38f;
+	float: right;	
+}
+
+aside table, td, th {                                          /*irlo poniendo uno a uno*/
+	border: 2px solid black;
+}
+
+aside table {
+	position: absolute;
+	width: 50%;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	/* unifico bordes en uno */
+	border-collapse: collapse;
+}
+
+footer {
+	position:relative;
+	height:10%;
+	width: 100%;
+	clear:both;
+	background-color: #c5ee90;
+	display: inline-flex;
+	align-items: center;
+	gap: 6%;
+}
+
+footer p {
+	margin-left: 10%;
+}

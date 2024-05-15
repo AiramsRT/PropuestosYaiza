@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    /* position: fixed; */
+    min-height: 500px;
+    min-width: 300px;                    /* tamaño de mi menu*/
+    float:right;
+    z-index: 0;
+}
+
+li {
+    list-style: none;
+    /* si los li tienen tamaño como máximo el de la a, conseguimos que el lateral fijo
+    de derecha nos permita bajar a los elementos del final de la lista que al cerrarse
+    no nos permite llegar */
+    max-width: 240px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+label {
+    border: 1px solid #123456;
+    border-radius: 5px;
+    /* le doy un tamaño al label */
+    width: 30px;
+    height: 30px;
+    /* la propiedad line-height con height del mismo tamaño centra verticalmente */
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    background: #123456;
+}
+
+.respmenu a {
+    display: block;
+    padding: 10px 20px;
+    /* con border-bottom hago el efecto de línea entre los a */
+    border-bottom: 2px solid #456789;
+    max-width: 240px;
+    background: #234567;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+}
+
+.respmenu input[type="checkbox"], label  {     /*abro el menu con el checkbox*/
+    position: relative;
+    float: right;
+    /* lo posiciono */
+    top: 3px;
+    right: 15px;
+    color: white;
+}
+
+.respmenu #menu {
+    opacity: 0;                    /*sea transparente*/
+}
+
+.respmenu {
+    position: relative;
+    min-height: 35px;   /* altura nav que contiene el icono menú*/
+}
+
+ .submenu, .submenu2{
+    display: none;
+}
+
+.respmenu input:checked ~ ul {    /* cuando abrimos el menú con checkbox*/
+    display: block;   
+    /* ul ocupa el width del nav y es mayor que li, por eso hay lateral oscuro debajo checkbox*/
+    background: #123456;   
+}
+
+.respmenu input:not(:checked) ~ ul {  /* cuando cerramos el menú con checkbox */
+    display: none;
+}
+
+.respmenu > ul > li:hover > ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #accdef;  
+}
+
+.submenu > li > a {                /* 1º submenú lo idento hacia dentro */
+    display: block;
+    background-color: #accdef;
+    padding-left: 30px;
+}
+
+ .submenu > li:hover .submenu2  {
+    display: block;
+}
+
+.submenu2 li a {                       /* 2º submenú idento hacia dentro */
+    background-color: #2d8ded;
+    transition-delay: 3s all ease-in-out;
+    padding-left: 50px;
+}

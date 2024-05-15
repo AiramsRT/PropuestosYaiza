@@ -1,0 +1,168 @@
+*{
+	margin:0;
+	padding: 0;
+	border:0; 
+} 
+
+html, body {
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+
+/* el ul y formulario está dentro del section, así que posiciono section y le doy tamaño*/
+section {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 945px;
+	height: 260px;
+}
+
+/* Menú */
+ul {
+	position:relative;
+	height:47px;	
+	display:block;
+	z-index: 2;                 /*para colocarlo delante del formulario */	
+}
+
+ul li {
+	display: inline-block;	
+}
+
+a {
+	color:white;
+	text-decoration: none;
+}
+
+.tab1 {
+	padding: 10.7px 92px ;  /* crece más en altura y anchura que .tab2 */
+	background:#5bac29;
+	border:4px double  white;
+}
+
+.tab2 {
+	padding: 8px 39px;	
+	background:  rgb(249, 249, 249);
+	border: 1px solid  rgb(163, 162, 162);
+	margin-left: 5.5px;      
+}
+
+.tab1, .tab2 {
+	border-radius: 4px 4px 0px 0px;  /*se aplica a las esquinas superiores*/
+	border-bottom: 0px;           /* quitamos el borde inferior */
+}
+
+.tab1 a {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.tab2 a {
+	color: rgb(65, 64, 64);
+	font-size: medium;
+}
+
+/* Formulario */
+form{
+	position:relative;	
+	height:200.4px;
+	/* no especifico un width, coge el de su padre, el section */
+	border:4px double  white;
+	border-radius:0 0 8px 8px;
+	background:#5bac29;
+	z-index: 1;	                             /*para colocarlo detrás del menú */
+}
+
+fieldset {
+	position:relative;
+	float: left;
+	/* bajo un poco el fieldset del formulario */
+	 margin-top: 10px; 
+	/* aplico padding solo en left y right */
+	padding: 0px 12px;	
+	/* importante darle tamaño */
+	height:160px;
+	width: 180px;
+	border-right:2px dotted white;
+	/*alineo todo a la derecha, todo lo que está en su interior*/
+	text-align: right;	        
+}
+
+fieldset a , fieldset label{
+	display:inline-flex;
+}
+
+fieldset input {	
+	vertical-align: middle;	     /* input alineado verticalmente con label */
+}
+
+#multiples_tray select, #fechas input {
+	margin: 4px 0;
+}
+
+#tipo_viajero {	
+	padding-top: 10px;
+	border-right: 0;                 /* quito el borde derecho de este fieldset */
+}
+
+#tipo_viajero input {
+	float:left;
+	clear:left;
+	/* para centrarlo con label, ya que no funciona el vertical-align:middle al no estar primero label y luego input*/
+	margin-top: 10px;   
+}
+
+#tipo_viajero label {
+	float: left;
+    margin-left: 2px;                  /*separo el label del input */
+	/* para centrarlo con input, ya que no funciona el vertical-align:middle al no estar primero label y luego input*/
+	margin-top: 7px;
+}
+
+#sel_adulto {
+	width: 50px;
+	margin-top: 5px;
+}
+
+select, #fecha_salida, #fecha_regreso {
+	position:relative;
+	height:40px;
+	width:180px;
+	font: bold 1.5em bold;  /* bold font-style mas grueso y otro bold font-weight negrita */
+	color: grey;
+}
+
+#viajeros {
+	padding-top: 10px;
+}
+
+#viajeros label, #viajeros a{	
+	float: left;
+	clear: left;
+	margin-top: 13px; 
+}
+
+#viajeros a {
+	padding-top: 8px;      /* separo los a de viajeros */
+}
+
+#sel_adulto {
+	height: 30px;	       /*la caja más pequeña de ese select concreto*/         
+	float:right;
+}
+
+#buscar {
+	position: absolute;
+	/* le damos un tamaño */
+	width: 100px;
+	height: 40px;
+	/* lo centro en altura */
+	top: 50%;
+	transform: translate(0%, -50%);
+	border-radius: 8px;	
+	font: bold 1.3em Arial;
+	background: #f3f4f5;
+}

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+aside {
+    position: absolute;    
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 180px;
+    width: 260px;
+    overflow-y: scroll;          /* añadir un scroll si hay desbordamiento en altura */
+}
+p {
+    position: sticky;
+    top: 0px;
+    background-color: #f9d097;
+    padding: 20px;
+    font-weight: bold;
+  }
+  ul{
+    margin: 20px 0;
+  }
+  
+  li{
+    padding-left: 20px;
+  }
